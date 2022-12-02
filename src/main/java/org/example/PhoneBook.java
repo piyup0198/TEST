@@ -51,7 +51,7 @@ public class PhoneBook {
          name = scanner.nextLine();
          for (int i = 0; i < phoneBook.size(); i++) {
              if (phoneBook.get(i).getName().equals(name)) {
-                 System.out.println("Enter the replacement contact name.");
+                 System.out.println("Enter the contact name you want to edit");
                  name = scanner.nextLine();
                  System.out.println("Enter this new contact's new phone number");
                  phoneNumber = scanner.nextLine();
