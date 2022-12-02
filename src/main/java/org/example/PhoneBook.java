@@ -40,7 +40,8 @@ public class PhoneBook {
          System.out.println("Enter the contact that you would like to delete");
          name = scanner.nextLine();
          for (int i=0; i<phoneBook.size(); i++) {
-             if (phoneBook.get(i).getName().equals(name)) { phoneBook.remove(i);
+             if (phoneBook.get(i).getName().equals(name)) {
+                 phoneBook.remove(i);
              }
          }
      }
