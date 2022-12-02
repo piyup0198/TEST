@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
-    private static PhoneBook mobilePhone = new PhoneBook();
+    private static PhoneBook phoneBook = new PhoneBook();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String args[]) {
@@ -18,16 +18,16 @@ public class Main {
                 int userInput = scanner.nextInt();
                 switch (userInput) {
                     case 1:
-                        mobilePhone.addContact();
+                        phoneBook.addContact();
                         break;
                     case 2:
-                        mobilePhone.deleteContact();
+                        phoneBook.deleteContact();
                         break;
                     case 3:
-                        mobilePhone.updateContact();
+                        phoneBook.updateContact();
                         break;
                     case 4:
-                        mobilePhone.printContacts();
+                        phoneBook.printContacts();
                         break;
                     case 5:
                         choice = true;

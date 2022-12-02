@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PhoneBook {
     //creating object for phonebook class
-     private static PhoneBook mobilephone = new PhoneBook();
+     private static PhoneBook phoneBook1 = new PhoneBook();
      private static Scanner scanner = new Scanner(System.in);
 
      //creating an array list for contacts
@@ -20,7 +20,7 @@ public class PhoneBook {
          else {
              System.out.println("Your current phone book has the following entries.");
              for (int i = 0; i < phoneBook.size(); i++) {
-                 System.out.println(i + 1 + ". Name:" + phoneBook.get(i).getName() + " PH# " + phoneBook.get(i).getPhoneNumber());
+                 System.out.println(i + 1 + ". Name:" + phoneBook.get(i).getName() + phoneBook.get(i).getPhoneNumber());
              }
          }
      }
