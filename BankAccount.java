@@ -25,16 +25,34 @@ public class BankAccount {
         System.out.println(accno + "," + name + "," + balance);
                             }
 
+    public synchronized void deposit(){
+        Long amount;
+        System.out.println("Enter the amount to be deposited: ");
+        amount = sc.nextLong();
+        try {
+            System.out.println("Depositing...");
+            Thread.sleep(2000);
+            balance = balance + amount;
+        }
+        catch (InterruptedException e){
+            System.err.println(e.getMessage());
+        }
+        System.out.println("Amount Deposited Succesfully");
+        System.out.println("Account Balance:"+balance);
+        notify();
+    }
     //method to deposit money
-    void deposit() {
+   /* void deposit() {
         long amount;
         System.out.println("Enter Amount U Want to Deposit : ");
         amount = sc.nextLong();
         balance = balance + amount;
     }
-
+ */
     //method to withdraw money
-    void withdrawal() {
+
+
+    void withdrawal () {
         long amount;
         System.out.println("Enter Amount U Want to withdraw : ");
         amount = sc.nextLong();
@@ -44,6 +62,7 @@ public class BankAccount {
             System.out.println("Less Balance..Transaction Failed..");
         }
     }
+
     boolean search(String acno) {
         if (accno.equals(acno)) {
             showAccount();
