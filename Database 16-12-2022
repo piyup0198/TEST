@@ -1,0 +1,18 @@
+/*Create a database table that will hold all the transactions done on a credit card.
+It will havae fields such as account number, details of the transaction along with transaction date. */
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GET_TRANS_AMT`(OUT NEW_PRICE INT,IN AC_NO INT,IN MONTH_ INT)
+BEGIN
+    DECLARE NEW_AMT INT;
+    SELECT PRICE INTO NEW_PRICE FROM TRANSACTION_DETAIL 
+    WHERE ACC_NO = AC_NO AND MONTH(TANS_DATE) = MONTH_;
+    
+    SET NEW_AMT = (NEW_PRICE*95)/100;
+    
+    SELECT NEW_AMT;
+END
+
+
+/* calling a procedure */
+CALL GET_TRANS_AMT(@TRAN, 123,12);
+SELECT @TRAN AS NEW_AMT;
