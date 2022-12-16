@@ -1,3 +1,18 @@
+USE infinite;
+/*Create a database table that will hold all the transactions done on a credit card. 
+It will havae fields such as account number, details of the transaction along with transaction date. */
+
+CREATE TABLE TRANSACTION_DETAIL( ACC_NO INT, TRANS_DETAILS VARCHAR(20),PRICE INT,TANS_DATE DATE);
+
+INSERT INTO TRANSACTION_DETAIL VALUES(123,'MOBILE',20000 ,'2022-12-16');
+INSERT INTO TRANSACTION_DETAIL VALUES(124,'SHOE', 3000,'2022-12-09');
+INSERT INTO TRANSACTION_DETAIL VALUES(125,'SAREE', 5000,'2022-11-23');
+INSERT INTO TRANSACTION_DETAIL VALUES(126,'TV', 12000,'2022-11-05');
+
+DROP TABLE TRANSACTION_DETAIL;
+
+SELECT * FROM TRANSACTION_DETAIL;
+
 /*Create a database table that will hold all the transactions done on a credit card.
 It will havae fields such as account number, details of the transaction along with transaction date. */
 
